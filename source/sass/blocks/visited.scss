@@ -1,0 +1,61 @@
+.visited__label--bold {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 18px;
+  color: $black;
+  font-weight: bold;
+  text-align: left;
+  text-transform: none;
+}
+
+.visited__label {
+  display: block;
+  position: relative;
+  padding-top: 17px;
+  padding-left: 83px;
+
+  & .visited__input:disabled ~ .visited__checkmark {
+    background-color: $grey-down;
+  }
+
+  & .visited__input:checked ~ .visited__checkmark::after {
+    display: block;
+  }
+
+  & .visited__checkmark::after {
+    width: 23px;
+    height: 16px;
+    border-style: hidden hidden solid solid;
+    transform: rotate(-45deg) translate(0%, -100%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+  }
+}
+
+.visited__input {
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+
+.visited__checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 56px;
+  width: 56px;
+  border-radius: 4px;
+  background-color: $grey-input;
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+}
+
+.visited__label:hover .visited__input ~ .visited__checkmark {
+  background-color: $grey-hover-disabled;
+}

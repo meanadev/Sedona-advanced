@@ -1,0 +1,34 @@
+.social {
+  position: relative;
+
+  &:hover {
+    background-color: $bluehover;
+  }
+
+  &-link {
+    display: inline-block;
+    width: 46px;
+    height: 48px;
+  }
+}
+
+.social-link__img {
+  display: inline-block;
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  width: 20px;
+  height: 20px;
+
+  &--twitter {
+    margin-top: 2px;
+  }
+
+  &--fb {
+    margin-left: 5px;
+  }
+
+  &--youtube {
+    margin-top: 3px;
+  }
+}

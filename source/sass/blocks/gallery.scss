@@ -1,0 +1,133 @@
+.gallery__wrapper {
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.gallery__listing {
+  padding-top: 22px;
+  background-color: $white;
+
+  &:first-child {
+    &::before {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 1px;
+      margin: 0 auto;
+      margin-bottom: 22px;
+      padding: 0;
+      background-color: $grey-line;
+    }
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    margin: 0 auto;
+    padding: 0;
+    background-color: $grey-line;
+  }
+}
+
+.gallery__flex .gallery__listing:first-child::before {
+  display: none;
+}
+
+.gallery__img {
+  width: 280px;
+  height: 280px;
+  margin: 0 auto;
+  margin-bottom: 11px;
+  background-size: cover;
+}
+
+.gallery__likes {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.gallery__video {
+  width: 100%;
+  text-align: center;
+}
+
+@media (min-width: $viewport-mid) {
+  .gallery {
+    max-width: 768px;
+    margin: 0 auto;
+  }
+
+  .gallery__flex {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 60px;
+    padding-right: 60px;
+    background-color: $white;
+  }
+
+  .gallery__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 60px;
+    margin-left: 60px;
+
+    &--flex {
+      margin: 0;
+    }
+  }
+
+  .gallery__listing {
+    flex-basis: 50%;
+    padding: 0;
+  }
+
+  .gallery__listing:first-child::before {
+    display: none;
+  }
+
+  .gallery__listing::after {
+    display: none;
+  }
+
+  .gallery__listing--large {
+    flex-basis: 100%;
+    padding-top: 22px;
+  }
+
+  .gallery__img {
+    display: block;
+    margin-bottom: 0;
+  }
+
+  .gallery__likes {
+    margin-top: 5px;
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: $viewport-large) {
+  .gallery {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    &__flex {
+      padding: 0;
+    }
+  }
+
+  .gallery__wrapper {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .gallery__listing {
+    flex-basis: 33.333%;
+    position: relative;
+  }
+
+  .gallery__listing--large {
+    flex-basis: 100%;
+  }
+}

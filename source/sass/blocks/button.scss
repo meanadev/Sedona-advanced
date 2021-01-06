@@ -1,0 +1,50 @@
+.button {
+  margin-bottom: 48px;
+  padding: 15px 32px 17px;
+  background-color: $lightblue;
+  color: $white;
+  border: none;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 21px;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: $bluehover;
+  }
+
+  &:disabled {
+    background-color: $grey-hover-disabled;
+  }
+}
+
+.button--fail {
+  width: 180px;
+}
+
+.button--success {
+  width: 280px;
+}
+
+@media (min-width: $viewport-mid) {
+  .button {
+    margin-bottom: 58px;
+    padding: 15px 137px 17px;
+  }
+
+  .button--fail {
+    padding: 17px 135px 15px;
+  }
+
+  .button--success {
+    width: 458px;
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: $viewport-large) {
+  .button {
+    margin-bottom: 65px;
+    padding: 15px 137px 17px;
+  }
+}

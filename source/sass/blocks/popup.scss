@@ -1,0 +1,21 @@
+@media (min-width: $viewport-mid) {
+  .popup__header {
+    width: 220px;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  .popup__text {
+    margin-bottom: 35px;
+  }
+
+  .popup__header--success {
+    width: 444px;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 20px;
+  }
+}

@@ -1,0 +1,279 @@
+.video {
+  padding-top: 30px;
+  padding-bottom: 155px;
+}
+
+.video__block {
+  width: 83%;
+  margin: 0 auto;
+  margin-top: 32px;
+}
+
+.video__header {
+  margin-bottom: 34px;
+}
+
+.video__text {
+  margin-bottom: 80px;
+}
+
+.video__container {
+  position: relative;
+  width: 320px;
+  height: 200px;
+  margin: 0 auto;
+  background-image: url("../img/video-mobile@1x.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/video-mobile@2x.jpg");
+  }
+}
+
+.video__controls {
+  position: absolute;
+  left: 50%;
+  bottom: -66px;
+  transform: translate(-50%);
+  width: 280px;
+  height: 111px;
+}
+
+.video__play-bar {
+  position: relative;
+  width: 280px;
+  height: 45px;
+  margin: 0;
+  background-color: $black;
+  opacity: 0.6;
+}
+
+.video__scroll-line {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 235px;
+  height: 3px;
+  margin: 0;
+  background-color: $white;
+  opacity: 0.2;
+}
+
+.video__scroll-dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  margin: 0;
+  border-radius: 50%;
+  border: none;
+  padding: 0;
+  background-color: $white;
+}
+
+.video__buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 280px;
+  height: 66px;
+  margin: 0;
+  padding-top: 21px;
+  padding-left: 25px;
+  padding-right: 23px;
+  border: none;
+  background-color: $grey-input;
+
+  &-reload {
+    width: 16px;
+    height: 20px;
+    border: none;
+    fill: $grey-video;
+
+    &:hover {
+      fill: $black-light;
+    }
+  }
+
+  &-subtitles {
+    width: 32px;
+    height: 20px;
+    border: none;
+    margin-right: 31px;
+    fill: $grey-video;
+
+    &:hover {
+      fill: $black-light;
+    }
+  }
+
+  &-fullscreen {
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    border: none;
+    fill: $grey-video;
+
+    & path {
+      fill: $grey-video;
+    }
+
+    &:hover path {
+      fill: $black-light;
+    }
+  }
+
+  .video-reload {
+    width: 16px;
+    height: 20px;
+    padding: 0;
+  }
+}
+
+@media (min-width: $viewport-mid) {
+  .video {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .video__block {
+    max-width: 445px;
+    margin: 0 auto;
+  }
+
+  .video__header {
+    margin-bottom: 34px;
+  }
+
+  .video__text {
+    margin-bottom: 80px;
+  }
+
+  .video__container {
+    position: relative;
+    width: 648px;
+    height: 500px;
+    margin: 0 auto;
+    margin-bottom: 0;
+    background-image: url("../img/video-tablet@1x.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/video-tablet@2x.jpg");
+    }
+  }
+
+  .video__controls {
+    position: absolute;
+    bottom: -18px;
+    width: 100%;
+  }
+
+  .video__play-bar {
+    width: 648px;
+    height: 93px;
+    background-color: $black;
+    opacity: 0.6;
+  }
+
+  .video__scroll-line {
+    width: 389px;
+    left: 44%;
+  }
+
+  .video__scroll-dot {
+    left: 32%;
+  }
+
+  .video__buttons {
+    position: absolute;
+    bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    width: 648px;
+    margin: 0 auto;
+    padding-left: 35px;
+    padding-right: 41px;
+    background-color: transparent;
+
+    &-reload {
+      width: 16px;
+      height: 20px;
+      background-color: transparent;
+      border: none;
+      fill: $white;
+
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+
+    &-subtitles {
+      width: 32px;
+      height: 20px;
+      margin-right: 31px;
+      background-color: transparent;
+      border: none;
+      fill: $white;
+
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+
+    &-fullscreen {
+      width: 20px;
+      height: 20px;
+      background-color: transparent;
+      border: none;
+      fill: $white;
+
+      & path {
+        fill: $white;
+      }
+
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+  }
+}
+
+@media (min-width: $viewport-large) {
+  .video {
+    padding-bottom: 93px;
+    padding-top: 36px;
+  }
+
+  .video__container {
+    width: 800px;
+    height: 500px;
+    background-image: url("../img/video-desktop@1x.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/video-desktop@2x.jpg");
+    }
+  }
+
+  .video__controls {
+    width: 800px;
+  }
+
+  .video__play-bar {
+    width: 100%;
+  }
+
+  .video__scroll-line {
+    width: 540px;
+  }
+
+  .video__buttons {
+    width: 100%;
+  }
+}
